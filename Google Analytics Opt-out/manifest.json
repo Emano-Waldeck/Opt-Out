@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "Google Analytics Opt-out",
   "description": "Prevents the Analytics's JavaScript engine from sending information to Google Analytics",
 
@@ -15,8 +15,12 @@
     "256": "data/icons/256.png"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
+
+  "homepage_url": "http://add0n.com/opt-out.html",
+
   "background": {
     "persistent": false,
     "scripts": [
@@ -38,6 +42,12 @@
       "38": "data/icons/38.png",
       "48": "data/icons/48.png",
       "64": "data/icons/64.png"
+    }
+  },
+  "applications": {
+    "gecko": {
+      "id": "{2f182d41-fd03-4a6d-938d-081419586c37}",
+      "strict_min_version": "52.0"
     }
   }
 }
