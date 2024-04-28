@@ -1,0 +1,5 @@
+{
+  "description": {
+    "message": "防止Google Analytics和Tag Manager的JavaScript API收集数据和记录用户。"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "description": {
+    "message": "Evita que las API de JavaScript de Google Analytics y del Administrador de Etiquetas recojan datos y registren al usuario"
+  }
+}

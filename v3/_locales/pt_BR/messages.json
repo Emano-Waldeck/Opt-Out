@@ -1,0 +1,5 @@
+{
+  "description": {
+    "message": "Impede que as APIs JavaScript do Google Analytics e Tag Manager coletem dados e gravem o usuário"
+  }
+}

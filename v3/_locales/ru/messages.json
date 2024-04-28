@@ -1,0 +1,5 @@
+{
+  "description": {
+    "message": "Предотвращает JavaScript API Google Analytics и Tag Manager от сбора данных и записи пользователя."
+  }
+}
