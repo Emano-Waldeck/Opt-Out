@@ -116,9 +116,11 @@ chrome.runtime.onMessage.addListener((request, sender) => {
     }
     once.done = true;
 
-    chrome.declarativeNetRequest.setExtensionActionOptions({
-      displayActionCountAsBadgeText: true
-    });
+    if ('setExtensionActionOptions' in chrome.declarativeNetRequest) {
+      chrome.declarativeNetRequest.setExtensionActionOptions({
+        displayActionCountAsBadgeText: true
+      });
+    }
     chrome.action.setBadgeBackgroundColor({
       color: '#929292'
     });
@@ -211,8 +213,7 @@ chrome.contextMenus.onClicked.addListener(async info => {
 {
   const {management, runtime: {onInstalled, setUninstallURL, getManifest}, storage, tabs} = chrome;
   if (navigator.webdriver !== true) {
-    const page = getManifest().homepage_url;
-    const {name, version} = getManifest();
+    const {homepage_url: page, name, version} = getManifest();
     onInstalled.addListener(({reason, previousVersion}) => {
       management.getSelf(({installType}) => installType === 'normal' && storage.local.get({
         'faqs': true,

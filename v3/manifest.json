@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "name": "Opt-out for Analytics™",
   "description": "__MSG_description__",
   "default_locale": "en",
@@ -35,7 +35,14 @@
   },
   "homepage_url": "https://webextension.org/listing/opt-out.html",
   "background": {
-    "service_worker": "worker.js"
+    "service_worker": "worker.js",
+    "scripts": ["worker.js"]
   },
-  "action": {}
+  "action": {},
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{2f182d41-fd03-4a6d-938d-081419586c37}",
+      "strict_min_version": "128.0"
+    }
+  }
 }
