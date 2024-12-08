@@ -29,15 +29,3 @@ port.addEventListener('ga-count', e => {
     });
   }
 });
-
-if (window.top === window) {
-  chrome.runtime.onMessage.addListener(request => {
-    if (request.method === 'increment') {
-      count += 1;
-      chrome.runtime.sendMessage({
-        method: 'ga-report-top',
-        count
-      });
-    }
-  });
-}

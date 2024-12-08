@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||metrics.adobe.com",
+      "resourceTypes": ["xmlhttprequest", "script", "image"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||omniture.com",
+      "resourceTypes": ["xmlhttprequest", "script", "image"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||2o7.net",
+      "resourceTypes": ["xmlhttprequest", "script", "image"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||omtrdc.net",
+      "resourceTypes": ["xmlhttprequest", "script", "image"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||sitecatalyst.com",
+      "resourceTypes": ["xmlhttprequest", "script", "image"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "||adobedtm.com",
+      "resourceTypes": ["xmlhttprequest", "script", "image"]
+    }
+  }
+]

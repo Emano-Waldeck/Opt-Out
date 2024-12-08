@@ -14,26 +14,28 @@
     "512": "/data/icons/512.png"
   },
   "permissions": [
-    "storage"
+    "contextMenus",
+    "scripting",
+    "storage",
+    "declarativeNetRequestWithHostAccess"
   ],
-  "homepage_url": "https://add0n.com/opt-out.html",
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ga",
+      "enabled": false,
+      "path": "rules/ga.json"
+    }, {
+      "id": "adobe",
+      "enabled": false,
+      "path": "rules/adobe.json"
+    }]
+  },
+  "homepage_url": "https://webextension.org/listing/opt-out.html",
   "background": {
     "service_worker": "worker.js"
   },
-  "content_scripts": [{
-    "matches": ["*://*/*"],
-    "js": ["/data/inject/isolated.js"],
-    "run_at": "document_start",
-    "all_frames": true,
-    "match_origin_as_fallback": true,
-    "world": "ISOLATED"
-  }, {
-    "matches": ["*://*/*"],
-    "js": ["/data/inject/main.js"],
-    "run_at": "document_start",
-    "all_frames": true,
-    "match_origin_as_fallback": true,
-    "world": "MAIN"
-  }],
   "action": {}
 }

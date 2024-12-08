@@ -18,4 +18,6 @@
       return true;
     }
   };
+
+  window.userOptOut = true; // Set this flag when the user opts out
 }
